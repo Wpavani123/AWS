@@ -1,0 +1,102 @@
+login as: ec2-user
+Authenticating with public key "Pavani-EC2"
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-28-75 ~]$ mkdir pavani
+[ec2-user@ip-172-31-28-75 ~]$ cd pavani
+[ec2-user@ip-172-31-28-75 pavani]$ touch
+touch: missing file operand
+Try 'touch --help' for more information.
+[ec2-user@ip-172-31-28-75 pavani]$ ls
+[ec2-user@ip-172-31-28-75 pavani]$ cat > pavani
+hello gayyi
+she is staing now amirpet
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani
+hello gayyi
+she is staing now amirpet
+[ec2-user@ip-172-31-28-75 pavani]$ cat >> pavani
+she is my institute friend
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani
+hello gayyi
+she is staing now amirpet
+she is my institute friend
+[ec2-user@ip-172-31-28-75 pavani]$ ls
+pavani
+[ec2-user@ip-172-31-28-75 pavani]$ cat > deepthi
+she is also institute friend
+she is funy girl
+[ec2-user@ip-172-31-28-75 pavani]$ cat deepthi
+she is also institute friend
+she is funy girl
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani deepthi > pavani1
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani1
+hello gayyi
+she is staing now amirpet
+she is my institute friend
+she is also institute friend
+she is funy girl
+[ec2-user@ip-172-31-28-75 pavani]$ ls
+deepthi  pavani  pavani1
+[ec2-user@ip-172-31-28-75 pavani]$ cp pavani1 pavani2
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani2
+hello gayyi
+she is staing now amirpet
+she is my institute friend
+she is also institute friend
+she is funy girl
+[ec2-user@ip-172-31-28-75 pavani]$ vi pavani2
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani2
+hello gayyi
+she is staing now amirpet
+she is my institute friend
+she is also institute friend
+she is funy girl
+my friends are good frinds
+ i am very happy
+
+[ec2-user@ip-172-31-28-75 pavani]$ ls
+deepthi  pavani  pavani1  pavani2
+[ec2-user@ip-172-31-28-75 pavani]$ cp pavani2 pavani3
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani3
+hello gayyi
+she is staing now amirpet
+she is my institute friend
+she is also institute friend
+she is funy girl
+my friends are good frinds
+ i am very happy
+
+[ec2-user@ip-172-31-28-75 pavani]$ mv pavani3 pavani4
+[ec2-user@ip-172-31-28-75 pavani]$ cat pavani4
+hello gayyi
+she is staing now amirpet
+she is my institute friend
+she is also institute friend
+she is funy girl
+my friends are good frinds
+ i am very happy
+
+[ec2-user@ip-172-31-28-75 pavani]$ nano pavani
+[ec2-user@ip-172-31-28-75 pavani]$ man
+What manual page do you want?
+For example, try 'man man'.
+[ec2-user@ip-172-31-28-75 pavani]$ cat  man
+cat: man: No such file or directory
+[ec2-user@ip-172-31-28-75 pavani]$ ch mod
+-bash: ch: command not found
+[ec2-user@ip-172-31-28-75 pavani]$ chmod
+chmod: missing operand
+Try 'chmod --help' for more information.
+[ec2-user@ip-172-31-28-75 pavani]$ tree
+-bash: tree: command not found
+[ec2-user@ip-172-31-28-75 pavani]$ date
+Thu Oct 30 09:11:34 UTC 2025
+[ec2-user@ip-172-31-28-75 pavani]$
