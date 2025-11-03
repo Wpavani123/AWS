@@ -1,0 +1,73 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2026-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-10-0-10-46 ~]$ whoa
+-bash: whoa: command not found
+[ec2-user@ip-10-0-10-46 ~]$ hostname-s
+-bash: hostname-s: command not found
+[ec2-user@ip-10-0-10-46 ~]$ whoami
+ec2-user
+[ec2-user@ip-10-0-10-46 ~]$ hostname -s
+ip-10-0-10-46
+[ec2-user@ip-10-0-10-46 ~]$ uptime -p
+up 7 minutes
+[ec2-user@ip-10-0-10-46 ~]$ who -H -a
+NAME       LINE         TIME             IDLE          PID COMMENT  EXIT
+           system boot  2025-11-03 05:11
+LOGIN      ttyS0        2025-11-03 05:11              2250 id=tyS0
+LOGIN      tty1         2025-11-03 05:11              2249 id=tty1
+           run-level 5  2025-11-03 05:11
+ec2-user + pts/0        2025-11-03 05:15   .          2932 (122.175.62.196)
+[ec2-user@ip-10-0-10-46 ~]$ TZ=America/New_York date
+Mon Nov  3 00:20:44 EST 2025
+[ec2-user@ip-10-0-10-46 ~]$ TZ=America/Los_Angeles date
+Sun Nov  2 21:22:15 PST 2025
+[ec2-user@ip-10-0-10-46 ~]$ ca1 -j
+-bash: ca1: command not found
+[ec2-user@ip-10-0-10-46 ~]$ TZ=india/Los_ Angeles date
+-bash: Angeles: command not found
+[ec2-user@ip-10-0-10-46 ~]$ TZ=India/Los_ Angeles date
+-bash: Angeles: command not found
+[ec2-user@ip-10-0-10-46 ~]$ ca1 -j
+-bash: ca1: command not found
+[ec2-user@ip-10-0-10-46 ~]$ ca1 -s
+-bash: ca1: command not found
+[ec2-user@ip-10-0-10-46 ~]$ Ca1 -j
+-bash: Ca1: command not found
+[ec2-user@ip-10-0-10-46 ~]$ id ec2-user
+uid=1000(ec2-user) gid=1000(ec2-user) groups=1000(ec2-user),4(adm),10(wheel),190                                                                                                             (systemd-journal),1011(Sales),1012(HR),1013(Finance),1015(Shipping),1016(Manager                                                                                                             s),1017(CEO)
+[ec2-user@ip-10-0-10-46 ~]$ history
+    1  whoa
+    2  hostname-s
+    3  whoami
+    4  hostname -s
+    5  uptime -p
+    6  who -H -a
+    7  TZ=America/New_York date
+    8  TZ=America/Los_Angeles date
+    9  ca1 -j
+   10  TZ=india/Los_ Angeles date
+   11  TZ=India/Los_ Angeles date
+   12  ca1 -j
+   13  ca1 -s
+   14  Ca1 -j
+   15  id ec2-user
+   16  history
+[ec2-user@ip-10-0-10-46 ~]$ TZ
+-bash: TZ: command not found
+[ec2-user@ip-10-0-10-46 ~]$ date
+Mon Nov  3 05:31:10 UTC 2025
+[ec2-user@ip-10-0-10-46 ~]$ !!
+date
+Mon Nov  3 05:31:20 UTC 2025
+[ec2-user@ip-10-0-10-46 ~]$
