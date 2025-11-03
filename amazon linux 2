@@ -1,0 +1,62 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2026-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-10-0-10-182 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-10-0-10-182 ~]$ mkdir companyA
+[ec2-user@ip-10-0-10-182 ~]$ cd companyA
+[ec2-user@ip-10-0-10-182 companyA]$ mkdir finance HR Management
+[ec2-user@ip-10-0-10-182 companyA]$ ls
+finance  HR  Management
+[ec2-user@ip-10-0-10-182 companyA]$ cd HR
+[ec2-user@ip-10-0-10-182 HR]$ touch Assessments.csv Trialperiod.csv
+[ec2-user@ip-10-0-10-182 HR]$ ls
+Assessments.csv  Trialperiod.csv
+[ec2-user@ip-10-0-10-182 HR]$ cd../Finance
+-bash: cd../Finance: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ touch salary.csv profitAndLossStatements.csv
+[ec2-user@ip-10-0-10-182 HR]$ ls
+Assessments.csv  profitAndLossStatements.csv  salary.csv  Trialperiod.csv
+[ec2-user@ip-10-0-10-182 HR]$ cd..
+-bash: cd..: command not found
+[ec2-user@ip-10-0-10-182 HR]$ cd companyA
+-bash: cd: companyA: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ touchManagement/managers.csv Management/Schedule.c                                                                                                             sv
+-bash: touchManagement/managers.csv: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ ls management
+ls: cannot access management: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ ls -1aR
+.:
+.
+..
+Assessments.csv
+profitAndLossStatements.csv
+salary.csv
+Trialperiod.csv
+[ec2-user@ip-10-0-10-182 HR]$ pwd
+/home/ec2-user/companyA/HR
+[ec2-user@ip-10-0-10-182 HR]$ ls HR/Finance
+ls: cannot access HR/Finance: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ rmdir Finance
+rmdir: failed to remove ‘Finance’: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ rm finance/profitandLossStaments.csv Finance/Salar                                                                                                             y.csv
+rm: cannot remove ‘finance/profitandLossStaments.csv’: No such file or directory
+rm: cannot remove ‘Finance/Salary.csv’: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ ls Finance
+ls: cannot access Finance: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ ls
+Assessments.csv  profitAndLossStatements.csv  salary.csv  Trialperiod.csv
+[ec2-user@ip-10-0-10-182 HR]$ HR/Management
+-bash: HR/Management: No such file or directory
+[ec2-user@ip-10-0-10-182 HR]$ ^C
+[ec2-user@ip-10-0-10-182 HR]$
