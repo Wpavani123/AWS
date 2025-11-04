@@ -1,0 +1,61 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2026-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-10-0-10-174 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-10-0-10-174 ~]$  pwd company
+/home/ec2-user
+[ec2-user@ip-10-0-10-174 ~]$ cd company
+-bash: cd: company: No such file or directory
+[ec2-user@ip-10-0-10-174 ~]$ sudo less /tem/log/secure
+/tem/log/secure: No such file or directory
+[ec2-user@ip-10-0-10-174 ~]$ q
+-bash: q: command not found
+[ec2-user@ip-10-0-10-174 ~]$ sudo lastlog
+Username         Port     From             Latest
+root                                       **Never logged in**
+bin                                        **Never logged in**
+daemon                                     **Never logged in**
+adm                                        **Never logged in**
+lp                                         **Never logged in**
+sync                                       **Never logged in**
+shutdown                                   **Never logged in**
+halt                                       **Never logged in**
+mail                                       **Never logged in**
+operator                                   **Never logged in**
+games                                      **Never logged in**
+ftp                                        **Never logged in**
+nobody                                     **Never logged in**
+systemd-network                            **Never logged in**
+dbus                                       **Never logged in**
+rpc                                        **Never logged in**
+libstoragemgmt                             **Never logged in**
+sshd                                       **Never logged in**
+rpcuser                                    **Never logged in**
+nfsnobody                                  **Never logged in**
+ec2-instance-connect                           **Never logged in**
+postfix                                    **Never logged in**
+rngd                                       **Never logged in**
+chrony                                     **Never logged in**
+tcpdump                                    **Never logged in**
+ec2-user         pts/0    122.175.62.196   Tue Nov  4 04:30:58 +0000 2025
+ljuan                                      **Never logged in**
+mmajor                                     **Never logged in**
+mjackson                                   **Never logged in**
+eowusu                                     **Never logged in**
+nwolf                                      **Never logged in**
+arosalez                                   **Never logged in**
+jdoe                                       **Never logged in**
+psantos                                    **Never logged in**
+smartinez                                  **Never logged in**
+ssarkar                                    **Never logged in**
