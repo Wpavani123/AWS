@@ -1,0 +1,80 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2026-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-10-0-10-11 ~]$ ping 8.8.8.8 -c 5
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=5.56 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=5.57 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=5.58 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=5.62 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=5.58 ms
+
+--- 8.8.8.8 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 5.560/5.583/5.622/0.070 ms
+[ec2-user@ip-10-0-10-11 ~]$ traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  240.1.228.14 (240.1.228.14)  6.152 ms  6.693 ms 240.1.228.15 (240.1.228.15)                                                                                                               6.227 ms
+ 2  242.16.82.233 (242.16.82.233)  6.509 ms 242.16.83.111 (242.16.83.111)  6.107                                                                                                              ms 242.16.83.105 (242.16.83.105)  7.646 ms
+ 3  99.82.10.8 (99.82.10.8)  7.623 ms  5.878 ms *
+ 4  99.83.116.81 (99.83.116.81)  5.642 ms 99.83.117.223 (99.83.117.223)  7.670 m                                                                                                             s *
+ 5  192.178.105.41 (192.178.105.41)  5.626 ms 192.178.105.141 (192.178.105.141)                                                                                                               5.619 ms *
+ 6  dns.google (8.8.8.8)  5.749 ms 142.251.50.245 (142.251.50.245)  5.555 ms dns                                                                                                             .google (8.8.8.8)  5.783 ms
+[ec2-user@ip-10-0-10-11 ~]$ netstat -tp
+(No info could be read for "-p": geteuid()=1000 but you should be root.)
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State                                                                                                                    PID/Program name
+tcp        0    192 ip-10-0-10-11.us-we:ssh abts-ap-static-19:62528 ESTABLISHED                                                                                                              -
+[ec2-user@ip-10-0-10-11 ~]$ telnet
+-bash: telnet: command not found
+[ec2-user@ip-10-0-10-11 ~]$ sudo yum install telnet -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.6 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package telnet.x86_64 1:0.17-65.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package        Arch           Version                 Repository          Size
+================================================================================
+Installing:
+ telnet         x86_64         1:0.17-65.amzn2         amzn2-core          64 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 64 k
+Installed size: 109 k
+Downloading packages:
+telnet-0.17-65.amzn2.x86_64.rpm                            |  64 kB   00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:telnet-0.17-65.amzn2.x86_64                                1/1
+  Verifying  : 1:telnet-0.17-65.amzn2.x86_64                                1/1
+
+Installed:
+  telnet.x86_64 1:0.17-65.amzn2
+
+Complete!
+[ec2-user@ip-10-0-10-11 ~]$ telnet www.google.com 80
+Trying 142.250.69.164...
+Connected to www.google.com.
+Escape character is '^]'.
+curl -vLo /dev/nu11 https://aws.com
+curl -vLo /dev/null https://aws.com
