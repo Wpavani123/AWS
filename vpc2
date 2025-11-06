@@ -1,0 +1,116 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+   ,     #_
+   ~\_  ####_        Amazon Linux 2
+  ~~  \_#####\
+  ~~     \###|       AL2 End of Life is 2026-06-30.
+  ~~       \#/ ___
+   ~~       V~' '->
+    ~~~         /    A newer version of Amazon Linux is available!
+      ~~._.   _/
+         _/ _/       Amazon Linux 2023, GA and supported until 2028-03-15.
+       _/m/'           https://aws.amazon.com/linux/amazon-linux-2023/
+
+[ec2-user@ip-10-0-10-5 ~]$ systemctl
+UNIT                        LOAD   ACTIVE SUB       DESCRIPTION
+proc-sys-fs-binfmt_misc.automount loaded active waiting   Arbitrary Executable F
+sys-devices-pci0000:00-0000:00:04.0-nvme-nvme0-nvme0n1-nvme0n1p1.device loaded a
+sys-devices-pci0000:00-0000:00:04.0-nvme-nvme0-nvme0n1-nvme0n1p128.device loaded
+sys-devices-pci0000:00-0000:00:04.0-nvme-nvme0-nvme0n1.device loaded active plug
+sys-devices-pci0000:00-0000:00:05.0-net-eth0.device loaded active plugged   Elas
+sys-devices-platform-serial8250-tty-ttyS1.device loaded active plugged   /sys/de
+sys-devices-platform-serial8250-tty-ttyS2.device loaded active plugged   /sys/de
+sys-devices-platform-serial8250-tty-ttyS3.device loaded active plugged   /sys/de
+sys-devices-pnp0-00:04-tty-ttyS0.device loaded active plugged   /sys/devices/pnp
+sys-subsystem-net-devices-eth0.device loaded active plugged   Elastic Network Ad
+-.mount                     loaded active mounted   /
+dev-hugepages.mount         loaded active mounted   Huge Pages File System
+dev-mqueue.mount            loaded active mounted   POSIX Message Queue File Sys
+run-user-1000.mount         loaded active mounted   /run/user/1000
+sys-kernel-debug.mount      loaded active mounted   Debug File System
+var-lib-nfs-rpc_pipefs.mount loaded active mounted   RPC Pipe File System
+brandbot.path               loaded active waiting   Flexible branding
+systemd-ask-password-plymouth.path loaded active waiting   Forward Password Requ
+systemd-ask-password-wall.path loaded active waiting   Forward Password Requests
+session-3.scope             loaded active running   Session 3 of user ec2-user
+acpid.service               loaded active running   ACPI Event Daemon
+amazon-ssm-agent.service    loaded active running   amazon-ssm-agent
+atd.service                 loaded active running   Job spooling tools
+auditd.service              loaded active running   Security Auditing Service
+chronyd.service             loaded active running   NTP client/server
+lines 4-26
+sys-devices-pci0000:00-0000:00:04.0-nvme-nvme0-nvme0n1-nvme0n1p128.device loaded active plugged   Amazon Elastic Block Store B
+sys-devices-pci0000:00-0000:00:04.0-nvme-nvme0-nvme0n1.device loaded active plugged   Amazon Elastic Block Store
+sys-devices-pci0000:00-0000:00:05.0-net-eth0.device loaded active plugged   Elastic Network Adapter (ENA
+sys-devices-platform-serial8250-tty-ttyS1.device loaded active plugged   /sys/devices/platform/serial
+sys-devices-platform-serial8250-tty-ttyS2.device loaded active plugged   /sys/devices/platform/serial
+sys-devices-platform-serial8250-tty-ttyS3.device loaded active plugged   /sys/devices/platform/serial
+sys-devices-pnp0-00:04-tty-ttyS0.device loaded active plugged   /sys/devices/pnp0/00:04/tty/
+sys-subsystem-net-devices-eth0.device loaded active plugged   Elastic Network Adapter (ENA
+-.mount                     loaded active mounted   /
+dev-hugepages.mount         loaded active mounted   Huge Pages File System
+dev-mqueue.mount            loaded active mounted   POSIX Message Queue File Sys
+run-user-1000.mount         loaded active mounted   /run/user/1000
+sys-kernel-debug.mount      loaded active mounted   Debug File System
+var-lib-nfs-rpc_pipefs.mount loaded active mounted   RPC Pipe File System
+brandbot.path               loaded active waiting   Flexible branding
+systemd-ask-password-plymouth.path loaded active waiting   Forward Password Requests to
+systemd-ask-password-wall.path loaded active waiting   Forward Password Requests to
+session-3.scope             loaded active running   Session 3 of user ec2-user
+acpid.service               loaded active running   ACPI Event Daemon
+amazon-ssm-agent.service    loaded active running   amazon-ssm-agent
+atd.service                 loaded active running   Job spooling tools
+auditd.service              loaded active running   Security Auditing Service
+chronyd.service             loaded active running   NTP client/server
+cloud-config.service        loaded active exited    Apply the settings specified
+cloud-final.service         loaded active exited    Execute cloud user/final scr
+cloud-init-local.service    loaded active exited    Initial cloud-init job (pre-
+cloud-init.service          loaded active exited    Initial cloud-init job (meta
+crond.service               loaded active running   Command Scheduler
+dbus.service                loaded active running   D-Bus System Message Bus
+getty@tty1.service          loaded active running   Getty on tty1
+gssproxy.service            loaded active running   GSSAPI Proxy Daemon
+irqbalance.service          loaded active running   irqbalance daemon
+kmod-static-nodes.service   loaded active exited    Create list of required stat
+libstoragemgmt.service      loaded active running   libstoragemgmt plug-in serve
+lvm2-lvmetad.service        loaded active running   LVM2 metadata daemon
+lvm2-monitor.service        loaded active exited    Monitoring of LVM2 mirrors,
+network.service             loaded active running   LSB: Bring up/down networkin
+postfix.service             loaded active running   Postfix Mail Transport Agent
+rhel-autorelabel-mark.service loaded active exited    Mark the need to relabel aft
+rhel-dmesg.service          loaded active exited    Dump dmesg to /var/log/dmesg
+rhel-domainname.service     loaded active exited    Read and set NIS domainname
+rhel-readonly.service       loaded active exited    Configure read-only root sup
+rngd-wake-threshold.service loaded active exited    Hardware RNG Entropy Gathere
+rngd.service                loaded active running   Hardware RNG Entropy Gathere
+rpcbind.service             loaded active running   RPC bind service
+rsyslog.service             loaded active running   System Logging Service
+serial-getty@ttyS0.service  loaded active running   Serial Getty on ttyS0
+sshd.service                loaded active running   OpenSSH server daemon
+[ec2-user@ip-10-0-10-5 ~]$ sudo systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor prese                                                                                                             t: disabled)
+   Active: inactive (dead)
+     Docs: man:httpd.service(8)
+[ec2-user@ip-10-0-10-5 ~]$ sudo systemctl start httpd.service
+[ec2-user@ip-10-0-10-5 ~]$ sudo systemctl status httpd.service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor prese                                                                                                             t: disabled)
+   Active: active (running) since Thu 2025-11-06 07:25:29 UTC; 56s ago
+     Docs: man:httpd.service(8)
+ Main PID: 2559 (httpd)
+   Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes se                                                                                                             rved/sec:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─2559 /usr/sbin/httpd -DFOREGROUND
+           ├─2560 /usr/sbin/httpd -DFOREGROUND
+           ├─2561 /usr/sbin/httpd -DFOREGROUND
+           ├─2562 /usr/sbin/httpd -DFOREGROUND
+           ├─2564 /usr/sbin/httpd -DFOREGROUND
+           └─2569 /usr/sbin/httpd -DFOREGROUND
+
+Nov 06 07:25:29 ip-10-0-10-5.us-west-2.compute.internal systemd[1]: Starting ...
+Nov 06 07:25:29 ip-10-0-10-5.us-west-2.compute.internal systemd[1]: Started T...
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-10-0-10-5 ~]$ http://<PUBLIC IP OF INSTANCE>
+-bash: syntax error near unexpected token `newline'
+[ec2-user@ip-10-0-10-5 ~]$
